@@ -1,0 +1,48 @@
+<!-- <html>
+    <head>
+        <script>
+            function message(){
+                alert("hello who are you")
+            }
+        </script>
+    </head>
+    <body>
+        <button
+        type="button"
+        onclick="message()"
+        style="margin-left: 50%;">
+        click me
+        </button>
+    </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hello to the temp</title>
+	<script>
+		var a=0;
+		var b=0;
+		var c=0;
+		function changeBackground() {
+			var x=document.getElementById('bg');
+			x.style.backgroundColor='rgb('+a+', '+b+', '+c+')';
+			a+=100;
+			b+=a+50;
+			c+=b+70;
+			if(a>255) a=a-b;
+			if(b>255) b=a;
+			if(c>255) c=b;
+		}
+	</script>
+</head>
+
+<body>
+	<h4>The input box will change color when UP arrow key is pressed</h4>
+	<input id="bg" onkeyup="changeBackground()" placeholder="write something" style="color:#fff">
+</body>
+
+</html>
